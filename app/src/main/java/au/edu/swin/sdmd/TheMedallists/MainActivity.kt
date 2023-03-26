@@ -45,14 +45,12 @@ class MainActivity : AppCompatActivity() {
     }.apply()
   }
 
-  //create the menu button on the top menu
   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
     val inflater: MenuInflater = menuInflater
     inflater.inflate(R.menu.lastclicked_menu, menu)
     return true
   }
 
-  //get saved data from shared preferences
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
     return when (item.itemId) {
       R.id.lastclicked -> {

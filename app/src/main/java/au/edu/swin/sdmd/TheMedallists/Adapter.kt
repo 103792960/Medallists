@@ -21,12 +21,12 @@ class Adapter(private val data: List<MedalRecords>, private val listener: (Medal
     override fun getItemCount() = data.size
 
     override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
-        val data_import = data[position] //Grab data
+        val data_import = data[position]
         holder.displayRow(data_import)
     }
 
     inner class ViewHolder(private val v: View) : RecyclerView.ViewHolder(v) {
-        private val total: TextView = v.findViewById(R.id.totalmedals) //the total medals
+        private val total: TextView = v.findViewById(R.id.totalmedals)
         private val ioccode: TextView = v.findViewById(R.id.ioc)
         private val countryname: TextView = v.findViewById(R.id.country)
 
@@ -39,37 +39,37 @@ class Adapter(private val data: List<MedalRecords>, private val listener: (Medal
             Log.i("countrycode", totalmedal.toString())
             if(totalmedal==0)
             {
-                countryname.setTextColor(Color.parseColor("#7a7a7a"));
+                countryname.setTextColor(Color.parseColor("#000000"));
 
-                total.setTextColor(Color.parseColor("#7a7a7a"));
+                total.setTextColor(Color.parseColor("#000000"));
 
-                ioccode.setTextColor(Color.parseColor("#7a7a7a"));
+                ioccode.setTextColor(Color.parseColor("#000000"));
 
             }
             else
             {
-                countryname.setTextColor(Color.parseColor("#328580"));
+                countryname.setTextColor(Color.parseColor("#CD7F32"));
 
-                total.setTextColor(Color.parseColor("#328580"));
+                total.setTextColor(Color.parseColor("#CD7F32"));
 
-                ioccode.setTextColor(Color.parseColor("#328580"));
+                ioccode.setTextColor(Color.parseColor("#CD7F32"));
             }
             Log.i("countrycode", item.ioccode)
             if (item.silver<item.gold)
             {
-                countryname.setTextColor(Color.parseColor("#9d7b0c"));
+                countryname.setTextColor(Color.parseColor("#FFD700"));
 
-                total.setTextColor(Color.parseColor("#9d7b0c"));
+                total.setTextColor(Color.parseColor("#FFD700"));
 
-                ioccode.setTextColor(Color.parseColor("#9d7b0c"));
+                ioccode.setTextColor(Color.parseColor("#FFD700"));
             }
             else if (item.bronze<item.silver)
             {
-                countryname.setTextColor(Color.parseColor("#723756"));
+                countryname.setTextColor(Color.parseColor("#808080"));
 
-                total.setTextColor(Color.parseColor("#723756"));
+                total.setTextColor(Color.parseColor("#808080"));
 
-                ioccode.setTextColor(Color.parseColor("#723756"));
+                ioccode.setTextColor(Color.parseColor("#808080"));
             }
             v.setOnClickListener()
             {
