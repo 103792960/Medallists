@@ -1,4 +1,4 @@
-package au.edu.swin.sdmd.myapp
+package au.edu.swin.sdmd.TheMedallists
 
 import org.junit.Test
 

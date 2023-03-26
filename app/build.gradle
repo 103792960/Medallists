@@ -1,15 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
 
     defaultConfig {
-        applicationId "au.edu.swin.sdmd.myapp"
+        applicationId "au.edu.swin.sdmd.TheMedallists"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
